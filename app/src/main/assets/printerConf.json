@@ -1,0 +1,16 @@
+{
+  "BTP-P33": [
+    {
+      "font_name": "55",
+      "default_scale": "0",
+      "dpi": "203"
+    }
+  ],
+  "BTP-P36": [
+    {
+      "font_name": "MHEIGB18.TTF",
+      "default_scale": "35",
+      "dpi": "203"
+    }
+  ]
+}
