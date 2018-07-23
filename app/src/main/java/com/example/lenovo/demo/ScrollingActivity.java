@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
@@ -26,19 +27,19 @@ public class ScrollingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mRecyleView = (RecyclerView) findViewById(R.id.recyler_list);
+        mRecyleView = findViewById(R.id.recyler_list);
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyleView.setLayoutManager(manager);
         mRecyleView.setNestedScrollingEnabled(false);
-        mRecyleView.setAdapter(new RecycleAdapter(this));
+        mRecyleView.setAdapter(new RecycleAdapter(this,new ArrayList<String>()));
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
